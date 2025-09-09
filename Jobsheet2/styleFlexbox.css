@@ -1,72 +1,113 @@
 html, body {
-margin: 0;
-padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
- font-family: Arial, Helvetica, sans-serif;
-background-color: #ddd;
-line-height: 1.65;
-padding-bottom: 1000px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    color: #333;
+    line-height: 1.65;
+    padding-bottom: 1000px;
 }
 
 .container-satu {
-width: 800px;
-max-width: 1000px;
-margin: 50px auto;
-background-color: #fff;
-padding: 20px;
-box-sizing: border-box;
-display: flex;
+    width: 800px;
+    max-width: 90%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 
 .sidebar-satu {
-width: 25%;
-padding: 15px;
-box-sizing: border-box;
+    width: 25%;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #f0f8ff;
+    border-radius: 5px;
+}
+
+.sidebar-satu h3 {
+    color: #4a4a4a;
+    margin-top: 0;
+    border-bottom: 1px solid #cceeff;
+    padding-bottom: 10px;
 }
 
 .sidebar-satu ul {
-list-style: none;
-padding: 0;
-margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .sidebar-satu ul li {
-margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .sidebar-satu ul li a {
-text-decoration: none;
-color: #007bff;
+    text-decoration: none;
+    color: #0056b3;
+}
+
+.sidebar-satu ul li a:hover {
+    color: #003366;
+    text-decoration: underline;
 }
 
 .img-sidebar {
-max-width: 100%;
-height: auto;
-display: block;
-margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 
 .kolom-utama {
-width: 50%;
-padding: 15px;
-box-sizing: border-box;
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.kolom-utama h2 {
+    color: #333;
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.kolom-utama p {
+    color: #555;
 }
 
 .img-utama {
-max-width: 100%;
-height: auto;
-display: block;
-margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 .sidebar-dua {
-width: 25%;
-padding: 15px;
-box-sizing: border-box;
+    width: 25%;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #fff0f5;
+    border-radius: 5px;
+}
+
+.sidebar-dua h3 {
+    color: #4a4a4a;
+    margin-top: 0;
+    border-bottom: 1px solid #ffd9eb;
+    padding-bottom: 10px;
 }
 
 .sidebar-dua p {
-margin-bottom: 15px;
+    color: #555;
 }
