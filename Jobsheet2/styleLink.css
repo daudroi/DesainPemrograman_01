@@ -10,3 +10,6 @@
     color: blue;
 }
 
+.link:visited {
+    color: greenyellow;
+}
