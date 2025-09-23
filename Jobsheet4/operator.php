@@ -32,3 +32,15 @@ echo "Hasil Lebih Kecil: " . ($hasilLebihKecil ? 'true' : 'false') . "<br>";
 echo "Hasil Lebih Besar: " . ($hasilLebihBesar ? 'true' : 'false') . "<br>";
 echo "Hasil Lebih Kecil Sama: " . ($hasilLebihKecilSama ? 'true' : 'false') . "<br>";
 echo "Hasil Lebih Besar Sama: " . ($hasilLebihBesarSama ? 'true' : 'false') . "<br>";
+
+//soal no 3.3
+$hasilAnd = $a && $b;
+$hasilOr = $a || $b;
+$hasilNotA = !$a;
+$hasilNotB = !$b;
+
+echo "<br>";
+echo "Hasil And: " . ($hasilAnd ? 'true' : 'false') . "<br>";
+echo "Hasil Or: " . ($hasilOr ? 'true' : 'false') . "<br>";
+echo "Hasil Not A: " . ($hasilNotA ? 'true' : 'false') . "<br>";
+echo "Hasil Not B: " . ($hasilNotB ? 'true' : 'false') . "<br>";
