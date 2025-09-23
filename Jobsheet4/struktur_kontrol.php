@@ -27,4 +27,5 @@ echo "<br><br>";
 echo "Atlet tersebut memerlukan $hari hari untuk mencapai jarak 500 kilometer.";
 
 
+
 ?>
