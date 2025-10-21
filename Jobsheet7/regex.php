@@ -27,4 +27,12 @@ if (preg_match($pattern, $text, $matches)) {
 } else {
     echo "Tidak ada yang cocok!<br>";
 }
+
+$pattern = '/go?d/';   // "o" boleh muncul 0 atau 1 kali
+$text = 'gd and god and good.';
+if (preg_match($pattern, $text, $matches)) {
+    echo "Cocokkan: " . $matches[0] . "<br>";
+} else {
+    echo "Tidak ada yang cocok!<br>";
+}
 ?>
