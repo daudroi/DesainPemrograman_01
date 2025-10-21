@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kategori Buku | Xenoverse Digital Library</title>
+  <link rel="icon" href="image/ovallogo.png">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      color: white;
+      background: linear-gradient(to bottom, #190036, #3c0072);
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #12f7ff;
+    }
+
+    .book-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px 80px;
+    }
+
+    .book-card {
+      width: 220px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .book-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .book-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .book-info {
+      padding: 15px;
+    }
+
+    .book-info h3 {
+      margin: 10px 0 5px;
+      font-size: 1.1rem;
+    }
+
+    .book-info a {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: #12f7ff;
+      color: #1a002b;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .book-info a:hover {
+      background: #00cce0;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 18px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #12f7ff;
+      color: #1a002b;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kategori Buku: <span id="kategori-nama">Semua</span></h1>
+    <a href="index.html#nextSection" class="back-btn">← Kembali</a>
+  </header>
+
+  <section class="book-container" id="bookContainer">
+ 
+  </section>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const kategori = params.get('cat') || 'semua';
+    document.getElementById('kategori-nama').textContent = kategori.charAt(0).toUpperCase() + kategori.slice(1);
+
+    const buku = [
+      { judul: "Fisika Dasar", kategori: "sains", gambar: "image/books/fisika.jpg", link: "#" },
+      { judul: "Kimia Seru", kategori: "sains", gambar: "image/books/kimia.jpg", link: "#" },
+      { judul: "AI Modern", kategori: "teknologi", gambar: "image/books/ai.jpg", link: "#" },
+      { judul: "Pemrograman Web", kategori: "teknologi", gambar: "image/books/web.jpg", link: "#" },
+      { judul: "Novel Bumi", kategori: "sastra", gambar: "image/books/bumi.jpg", link: "#" },
+      { judul: "Kumpulan Puisi", kategori: "sastra", gambar: "image/books/puisi.jpg", link: "#" },
+      { judul: "THE HISTORIANS’ HISTORY OF THE WORLD", kategori: "sejarah", gambar: "image/kategori/coversejarah.jpg", link: "https://www.gutenberg.org/cache/epub/77058/pg77058-images.html" },
+      { judul: "A Story of Modern Java by Louis Couperus", kategori: "sejarah", gambar: "image/kategori/coversejarah2.jpg", link: "https://www.gutenberg.org/cache/epub/34725/pg34725-images.html" }
+    ];
+
+    const container = document.getElementById('bookContainer');
+    const filtered = kategori === 'semua' ? buku : buku.filter(b => b.kategori === kategori);
+
+    filtered.forEach(b => {
+      const card = `
+        <div class="book-card">
+          <img src="${b.gambar}" alt="${b.judul}">
+          <div class="book-info">
+            <h3>${b.judul}</h3>
+            <a href="${b.link}" target="_blank">Baca</a>
+          </div>
+        </div>`;
+      container.innerHTML += card;
+    });
+  </script>
+</body>
+</html>
